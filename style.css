@@ -1,0 +1,76 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    line-height: 30px;
+}
+
+body {
+    min-width: 550px;
+    min-height: 290px;
+    padding: 10px;
+}
+
+.two-cards {
+    width: 350px;
+    height: 250px;
+    padding: 10px;
+    text-align: center;
+}
+
+.two-cards div {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 180px;
+    margin: 0 10px;
+    margin-top: 30px;
+    vertical-align: middle;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+    background-size: 50px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;        
+}
+
+/* Ширина иконок, не изменяйте */
+.two-cards div::before,
+.two-cards div::after {
+    position: absolute;
+    display: block;
+    padding-bottom: 20px;
+    width: 20px;    
+    font-size: 25px;
+    font-weight: bold;
+    background-size: 25px;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+}
+
+.two-cards div::before {
+    top: 5px;
+    left: 5px;
+}
+
+.two-cards div:after {
+    top: 125px;
+    left: 95px;    
+    /* Поворот нижней иконки */
+    transform: rotate(180deg);
+}
+
+.ace-heart,
+.ace-heart::before,
+.ace-heart::after {
+    content: 'A';
+    color: red;
+    background-image: url('https://htmlacademy.ru/assets/course57/heart.svg');    
+}
+
+.two-spade,
+.two-spade::before,
+.two-spade::after {
+    content: '2';
+    background-image: url('https://htmlacademy.ru/assets/course57/spade.svg');    
+}
